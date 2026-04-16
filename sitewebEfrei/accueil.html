@@ -10,8 +10,17 @@
 <body>
 
     <header>
+        <div id="sideMenu" class="side-menu">
+            <a href="accueil.html">Accueil</a>
+            <a href="cours.html">Cours</a>
+            <a href="equipe.html">Équipe</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
         <div class="logo">
-            <img src="../images/logo.png" alt="Logo">
+            <a href="https://www.efrei.fr" target="_blank">
+                <img src="../images/logo.png" alt="Logo">
+            </a>
         </div>
 
         <nav>
@@ -47,29 +56,38 @@
         <div class="card">
             <h3>Présentation</h3>
             <p>Découvrez notre département</p>
-            <button>Lire plus</button>
+            <button class="open-popup" data-title="Présentation" data-text="Le département informatique de l'EFREI forme des experts en développement, réseaux, cybersécurité et intelligence artificielle. Les étudiants bénéficient d'un enseignement pratique et de projets concrets.">Lire plus</button>
         </div>
 
         <div class="card">
             <h3>Nos Formations</h3>
             <p>Voir les programmes</p>
-            <button>Voir</button>
+            <button class="open-popup" data-title="Nos Formations" data-text="Nous proposons des formations en programmation web, bases de données, réseaux, systèmes embarqués et intelligence artificielle. Chaque formation inclut des projets pratiques et du travail en équipe.">Voir</button>
         </div>
 
         <div class="card">
             <h3>Actualités</h3>
             <p>Dernières infos</p>
-            <button>Consulter</button>
+            <button class="open-popup" data-title="Actualités" data-text="Découvrez les dernières actualités du département : hackathons, conférences, nouveaux projets étudiants et partenariats avec des entreprises technologiques.">Consulter</button>
         </div>
     </section>
 
     </main>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <h2 id="popup-title"></h2>
+            <p id="popup-text"></p>
+        </div>
+    </div>
 
     <footer>
         <p>© Département Informatique</p>
     </footer>
 
     <script src="../js/script.js"></script>
-
+    
+    <div id="overlay" class="overlay"></div>
 </body>
 </html>
