@@ -1,17 +1,74 @@
-<!DOCTYPE html> <!-- Version 5 de HTML-->
-<html lang="fr"> <!-- Précision de la langue pour le navigateur-->
-   <head> <!-- Entête du document HTML -->
-      <link rel="stylesheet" type="text/css" href="../css/styles.css">
-      <title></title> <!-- Indique au navigateur quel titre vous donnez à votre page -->
-      <meta charset="UTF-8"> <!-- précise l'encodage des caractère à UTF-8-->
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Accueil</title>
+<link rel="stylesheet" href="../css/style.css">
+</head>
 
-    </head><!-- Fin de la balise d'entête -->
-    <body><!-- Début du code de la page web -->
-        <header>
-        </header>
-        <footer>
+<body>
 
-        </footer>
-        <script src="js/chatbot.js"></script>
-    </body><!-- Fin du code de la page web -->
-</html><!-- Fin du document -->
+<header>
+    <div class="logo">
+        <img src="images/logo.png" alt="Logo">
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="cours.html">Cours</a></li>
+            <li><a href="equipe.html">Équipe</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<section class="hero">
+    <h1>Bienvenue au Département Informatique</h1>
+
+    <div class="carousel">
+        <button class="prev">&#10094;</button>
+
+        <div class="slides">
+            <img src="images/slide1.jpg">
+            <img src="images/slide2.jpg">
+            <img src="images/slide3.jpg">
+        </div>
+
+        <button class="next">&#10095;</button>
+    </div>
+</section>
+
+<section class="cards">
+    <div class="card">
+        <h3>Présentation</h3>
+        <p>Découvrez notre département</p>
+        <button>Lire plus</button>
+    </div>
+
+    <div class="card">
+        <h3>Nos Formations</h3>
+        <p>Voir les programmes</p>
+        <button>Voir</button>
+    </div>
+
+    <div class="card">
+        <h3>Actualités</h3>
+        <p>Dernières infos</p>
+        <button>Consulter</button>
+    </div>
+</section>
+
+</main>
+
+<footer>
+<p>© Département Informatique</p>
+</footer>
+
+<script src="js/script.js"></script>
+
+</body>
+</html>
