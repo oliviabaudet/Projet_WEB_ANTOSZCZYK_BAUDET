@@ -2,22 +2,74 @@
 
 let slideIndex = 0;
 const slides = document.querySelectorAll(".slides img");
+const dotsContainer = document.querySelector(".dots");
+
+let autoSlide;
+let dots = [];
 
 function showSlide(index) {
+    if (!slides.length) return;
+
+    slideIndex = index;
+
     slides.forEach(slide => slide.classList.remove("active"));
-    slides[index].classList.add("active");
+
+    slides[slideIndex].classList.add("active");
+
+    // dots safe check
+    if (dots.length > 0) {
+        dots.forEach(dot => dot.classList.remove("active"));
+        if (dots[slideIndex]) {
+            dots[slideIndex].classList.add("active");
+        }
+    }
 }
 
-if (slides.length > 0) {
+function nextSlide() {
+    slideIndex = (slideIndex + 1) % slides.length;
     showSlide(slideIndex);
+}
+
+function startAutoSlide() {
+    autoSlide = setInterval(nextSlide, 4000);
+}
+
+function resetAutoSlide() {
+    clearInterval(autoSlide);
+    startAutoSlide();
+}
+
+// init
+if (slides.length > 0) {
+
+    // sécurité dots container
+    if (dotsContainer) {
+
+        slides.forEach((_, index) => {
+            const dot = document.createElement("div");
+            dot.classList.add("dot");
+
+            dot.addEventListener("click", () => {
+                showSlide(index);
+                resetAutoSlide();
+            });
+
+            dotsContainer.appendChild(dot);
+            dots.push(dot);
+        });
+    }
+
+    // initial state
+    showSlide(0);
+    startAutoSlide();
 
     const nextBtn = document.querySelector(".next");
     const prevBtn = document.querySelector(".prev");
 
     if (nextBtn) {
         nextBtn.addEventListener("click", () => {
-            slideIndex = (slideIndex + 1) % slides.length;
-            showSlide(slideIndex);
+            nextSlide();
+            resetAutoSlide();
         });
     }
 
@@ -25,16 +77,12 @@ if (slides.length > 0) {
         prevBtn.addEventListener("click", () => {
             slideIndex = (slideIndex - 1 + slides.length) % slides.length;
             showSlide(slideIndex);
+            resetAutoSlide();
         });
     }
-
-    setInterval(() => {
-        slideIndex = (slideIndex + 1) % slides.length;
-        showSlide(slideIndex);
-    }, 4000);
 }
 
-// Formulzaire de contact
+// Formulaire de contact
 
 const form = document.getElementById("contactForm");
 
