@@ -34,18 +34,51 @@
         </nav>
     </header>
 
-    <section class="contact">
+    <section class="contact-container">
 
-        <form id="contactForm">
-            <input type="text" placeholder="Nom" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Message"></textarea>
-            <button type="submit">Envoyer</button>
-        </form>
+        <div class="contact-card">
 
-        <div class="about">
-            <h2>À propos de nous</h2>
-            <p>Informations sur le département informatique.</p>
+            <h1>Contactez-nous</h1>
+
+            <p class="subtitle">
+                Envoyez un message à un professeur ou à l'administration
+            </p>
+
+            <form id="contactForm">
+
+                <label>Destinataire</label>
+                <input type="text" id="destinataire" placeholder="Nom du professeur">
+
+                <label>Nom</label>
+                <input type="text" placeholder="Votre nom" required>
+
+                <label>Email</label>
+                <input type="email" placeholder="Votre email" required>
+
+                <label>Message</label>
+                <textarea placeholder="Votre message..." required></textarea>
+
+                <button type="submit">Envoyer le message</button>
+
+            </form>
+
+        </div>
+
+        <div class="contact-info">
+
+            <h2>Département Informatique</h2>
+
+            <p>
+                Vous pouvez contacter les enseignants directement via ce formulaire.
+                Les réponses sont généralement rapides sous 24 à 48h.
+            </p>
+
+            <div class="info-box">
+                <p>📍 EFREI Paris</p>
+                <p>📧 contact@efrei.fr</p>
+                <p>📞 01 81 99 70 00</p>
+            </div>
+
         </div>
 
     </section>

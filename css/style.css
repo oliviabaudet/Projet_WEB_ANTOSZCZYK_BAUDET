@@ -158,18 +158,92 @@ width: 50%;
 }
 
 .team {
-display: flex;
-justify-content: space-around;
-padding: 40px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .teacher {
-width: 22%;
-text-align: center;
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.teacher:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
 .teacher img {
-width: 100%;
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+.teacher h3 {
+    margin-top: 15px;
+    color: #002b5c;
+}
+
+.teacher p {
+    padding: 0 15px;
+    color: #555;
+    font-size: 14px;
+}
+
+.teacher button {
+    background: #002b5c;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.teacher button:hover {
+    background: #004a9f;
+}
+
+@media (max-width: 1024px) {
+    .team {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .team {
+        grid-template-columns: 1fr;
+    }
+}
+
+.popup-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.popup-subject {
+    font-weight: bold;
+    color: #002b5c;
+    margin-bottom: 10px;
+}
+
+.popup-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 15px;
+    background: #002b5c;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
 }
 
 .contact {
@@ -394,4 +468,99 @@ transform: scale(1.2);
 opacity: 0.8;
 }
 
+.team-title {
+    text-align: center;
+    font-size: 36px;
+    margin: 40px 0 0px;
+    color: #002b5c;
+    font-weight: bold;
+}
 
+.contact-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.contact-card {
+    flex: 1;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+.contact-card h1 {
+    color: #002b5c;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+.contact-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-card label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #002b5c;
+}
+
+.contact-card input,
+.contact-card textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.contact-card textarea {
+    min-height: 120px;
+    resize: none;
+}
+
+.contact-card button {
+    margin-top: 20px;
+    padding: 12px;
+    background: #002b5c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.contact-card button:hover {
+    background: #004a9f;
+}
+
+.contact-info {
+    flex: 1;
+    padding: 30px;
+}
+
+.contact-info h2 {
+    color: #002b5c;
+    margin-bottom: 10px;
+}
+
+.info-box {
+    margin-top: 20px;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}

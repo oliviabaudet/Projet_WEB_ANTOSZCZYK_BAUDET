@@ -121,30 +121,42 @@ if (menuIcon && nav) {
 }
 
 // Boutons popup
-
 const popup = document.getElementById("popup");
-const popupTitle = document.getElementById("popup-title");
+
+const popupImg = document.getElementById("popup-img");
+const popupName = document.getElementById("popup-name");
+const popupSubject = document.getElementById("popup-subject");
 const popupText = document.getElementById("popup-text");
+const popupEmail = document.getElementById("popup-email");
+const popupHours = document.getElementById("popup-hours");
+
 const closeBtn = document.querySelector(".close");
 
-document.querySelectorAll(".open-popup").forEach(button => {
-button.addEventListener("click", () => {
-popupTitle.textContent = button.dataset.title;
-popupText.textContent = button.dataset.text;
-popup.style.display = "flex";
-});
+document.querySelectorAll(".open-popup").forEach(btn => {
+    btn.addEventListener("click", () => {
+
+        popupImg.src = btn.dataset.img;
+
+        popupName.textContent = btn.dataset.name;
+        popupSubject.textContent = btn.dataset.subject;
+        popupText.textContent = btn.dataset.text;
+        popupEmail.textContent = btn.dataset.email;
+        popupHours.textContent = btn.dataset.hours;
+
+        popup.style.display = "flex";
+    });
 });
 
-if(closeBtn){
-closeBtn.addEventListener("click", () => {
-popup.style.display = "none";
-});
+if (closeBtn) {
+    closeBtn.addEventListener("click", () => {
+        popup.style.display = "none";
+    });
 }
 
 window.addEventListener("click", (e) => {
-if(e.target === popup){
-popup.style.display = "none";
-}
+    if (e.target === popup) {
+        popup.style.display = "none";
+    }
 });
 
 // Side menu
@@ -174,4 +186,13 @@ closeMenu();
 function closeMenu(){
 sideMenu.classList.remove("active");
 overlay.classList.remove("active");
+}
+
+const params = new URLSearchParams(window.location.search);
+const dest = params.get("dest");
+
+const inputDest = document.getElementById("destinataire");
+
+if (dest && inputDest) {
+    inputDest.value = dest;
 }
