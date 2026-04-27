@@ -15,6 +15,7 @@
             <a href="cours.html">Cours</a>
             <a href="equipe.html">Équipe</a>
             <a href="contact.html">Contact</a>
+            <a href="apropos.html">À propos</a>
         </div>
 
         <div class="logo">
@@ -47,13 +48,10 @@
             <form id="contactForm">
 
                 <label>Destinataire</label>
-                <input type="text" id="destinataire" placeholder="Nom du professeur">
+                <input type="email" id="destinataire" placeholder="Email du destinataire" required>
 
-                <label>Nom</label>
-                <input type="text" placeholder="Votre nom" required>
-
-                <label>Email</label>
-                <input type="email" placeholder="Votre email" required>
+                <label>Objet</label>
+                <input type="text" id="objet" placeholder="Objet du message" required>
 
                 <label>Message</label>
                 <textarea placeholder="Votre message..." required></textarea>
@@ -64,40 +62,26 @@
 
         </div>
 
-        <div class="contact-info">
-
-            <h2>Département Informatique</h2>
-
-            <p>
-                Vous pouvez contacter les enseignants directement via ce formulaire.
-                Les réponses sont généralement rapides sous 24 à 48h.
-            </p>
-
-            <div class="info-box">
-                <p>📍 EFREI Paris</p>
-                <p>📧 contact@efrei.fr</p>
-                <p>📞 01 81 99 70 00</p>
-            </div>
-
-        </div>
-
     </section>
 
     <div id="overlay" class="overlay"></div>
 
     <footer>
+
+        <a href="apropos.html" class="footer-about">À propos</a>
+
         <p>© 2026 Efrei – Tous droits réservés</p>
 
         <div class="socials">
-        <a href="https://www.youtube.com/efrei" target="_blank">
-            <img src="../images/youtube.png" alt="YouTube">
-        </a>
+            <a href="https://www.youtube.com/efrei" target="_blank">
+                <img src="../images/youtube.png" alt="YouTube">
+            </a>
 
-        <a href="https://www.instagram.com/efrei_paris/" target="_blank">
-            <img src="../images/instagram.png" alt="Instagram">
-        </a>
-    </div>
-        
+            <a href="https://www.instagram.com/efrei_paris/" target="_blank">
+                <img src="../images/instagram.png" alt="Instagram">
+            </a>
+        </div>
+
     </footer>
 
     <script src="../js/script.js"></script>

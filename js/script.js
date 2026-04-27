@@ -1,4 +1,6 @@
-// Carousel
+// =======================
+// CAROUSEL
+// =======================
 
 let slideIndex = 0;
 const slides = document.querySelectorAll(".slides img");
@@ -13,10 +15,8 @@ function showSlide(index) {
     slideIndex = index;
 
     slides.forEach(slide => slide.classList.remove("active"));
-
     slides[slideIndex].classList.add("active");
 
-    // dots safe check
     if (dots.length > 0) {
         dots.forEach(dot => dot.classList.remove("active"));
         if (dots[slideIndex]) {
@@ -39,12 +39,10 @@ function resetAutoSlide() {
     startAutoSlide();
 }
 
-// init
+// INIT CAROUSEL
 if (slides.length > 0) {
 
-    // sécurité dots container
     if (dotsContainer) {
-
         slides.forEach((_, index) => {
             const dot = document.createElement("div");
             dot.classList.add("dot");
@@ -59,7 +57,6 @@ if (slides.length > 0) {
         });
     }
 
-    // initial state
     showSlide(0);
     startAutoSlide();
 
@@ -82,7 +79,10 @@ if (slides.length > 0) {
     }
 }
 
-// Formulaire de contact
+
+// =======================
+// FORMULAIRE CONTACT
+// =======================
 
 const form = document.getElementById("contactForm");
 
@@ -111,6 +111,11 @@ if (form) {
     });
 }
 
+
+// =======================
+// MENU MOBILE
+// =======================
+
 const menuIcon = document.querySelector(".menu-icon");
 const nav = document.querySelector("nav");
 
@@ -120,33 +125,63 @@ if (menuIcon && nav) {
     });
 }
 
-// Boutons popup
-const popup = document.getElementById("popup");
 
+// =======================
+// POPUP
+// =======================
+
+const popup = document.getElementById("popup");
 const popupImg = document.getElementById("popup-img");
 const popupName = document.getElementById("popup-name");
 const popupSubject = document.getElementById("popup-subject");
 const popupText = document.getElementById("popup-text");
 const popupEmail = document.getElementById("popup-email");
 const popupHours = document.getElementById("popup-hours");
-
 const closeBtn = document.querySelector(".close");
 
 document.querySelectorAll(".open-popup").forEach(btn => {
     btn.addEventListener("click", () => {
 
-        popupImg.src = btn.dataset.img;
+        // TEXTE
+        popupName.textContent = btn.dataset.name || "";
+        popupSubject.textContent = btn.dataset.subject || "";
+        popupText.textContent = btn.dataset.text || "";
 
-        popupName.textContent = btn.dataset.name;
-        popupSubject.textContent = btn.dataset.subject;
-        popupText.textContent = btn.dataset.text;
-        popupEmail.textContent = btn.dataset.email;
-        popupHours.textContent = btn.dataset.hours;
+        // IMAGE
+        if (popupImg) {
+            if (btn.dataset.img) {
+                popupImg.src = btn.dataset.img;
+                popupImg.style.display = "block";
+            } else {
+                popupImg.style.display = "none";
+            }
+        }
+
+        // EMAIL
+        if (popupEmail && popupEmail.parentElement) {
+            if (btn.dataset.email) {
+                popupEmail.textContent = btn.dataset.email;
+                popupEmail.parentElement.style.display = "block";
+            } else {
+                popupEmail.parentElement.style.display = "none";
+            }
+        }
+
+        // HORAIRES
+        if (popupHours && popupHours.parentElement) {
+            if (btn.dataset.hours) {
+                popupHours.textContent = btn.dataset.hours;
+                popupHours.parentElement.style.display = "block";
+            } else {
+                popupHours.parentElement.style.display = "none";
+            }
+        }
 
         popup.style.display = "flex";
     });
 });
 
+// FERMETURE POPUP
 if (closeBtn) {
     closeBtn.addEventListener("click", () => {
         popup.style.display = "none";
@@ -159,34 +194,41 @@ window.addEventListener("click", (e) => {
     }
 });
 
-// Side menu
+
+// =======================
+// SIDE MENU
+// =======================
 
 const menuBtn = document.querySelector(".menu-icon");
 const sideMenu = document.getElementById("sideMenu");
 const overlay = document.getElementById("overlay");
 
-if(menuBtn && sideMenu){
+if (menuBtn && sideMenu && overlay) {
 
-menuBtn.addEventListener("click", (e) => {
-e.stopPropagation();
-sideMenu.classList.toggle("active");
-overlay.classList.toggle("active");
-});
+    menuBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        sideMenu.classList.toggle("active");
+        overlay.classList.toggle("active");
+    });
 
-overlay.addEventListener("click", closeMenu);
+    overlay.addEventListener("click", closeMenu);
 
-document.addEventListener("click", (e) => {
-if (!sideMenu.contains(e.target) && !menuBtn.contains(e.target)) {
-closeMenu();
+    document.addEventListener("click", (e) => {
+        if (!sideMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+            closeMenu();
+        }
+    });
 }
-});
 
+function closeMenu() {
+    sideMenu.classList.remove("active");
+    overlay.classList.remove("active");
 }
 
-function closeMenu(){
-sideMenu.classList.remove("active");
-overlay.classList.remove("active");
-}
+
+// =======================
+// DESTINATAIRE AUTO (CONTACT)
+// =======================
 
 const params = new URLSearchParams(window.location.search);
 const dest = params.get("dest");
@@ -196,3 +238,16 @@ const inputDest = document.getElementById("destinataire");
 if (dest && inputDest) {
     inputDest.value = dest;
 }
+
+const popupContact = document.getElementById("popup-contact");
+
+document.querySelectorAll(".open-popup").forEach(btn => {
+    btn.addEventListener("click", () => {
+
+        const email = btn.dataset.email;
+
+        if (popupContact && email) {
+            popupContact.href = "contact.html?dest=" + encodeURIComponent(email);
+        }
+    });
+});
