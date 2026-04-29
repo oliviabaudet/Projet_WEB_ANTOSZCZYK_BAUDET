@@ -48,9 +48,70 @@
 
         <div class="right">
             <h2>Planning</h2>
-            <table>
-                <tr><th>Lundi</th><th>Mardi</th><th>Mercredi</th></tr>
-                <tr><td>Web</td><td>BDD</td><td>Réseaux</td></tr>
+            <table class="planning">
+                <thead>
+                    <tr>
+                        <th>Heure</th>
+                        <th>Lundi</th>
+                        <th>Mardi</th>
+                        <th>Mercredi</th>
+                        <th>Jeudi</th>
+                        <th>Vendredi</th>
+                        <th>Samedi</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td>8h - 10h</td>
+
+                        <td class="course open-popup"
+                            data-name="Programmation Web"
+                            data-subject="Prof : Yvan Monka"
+                            data-text="Salle B001"
+                            data-link="equipe.html">
+                            Web
+                        </td>
+                        <td class="course open-popup"
+                            data-name="Base de données"
+                            data-subject="Prof : Lucas Maths"
+                            data-text="Salle H105"
+                            data-link="equipe.html">
+                            BDD
+                        </td>
+                        <td class="course open-popup"
+                            data-name="Réseaux"
+                            data-subject="Prof : Timothée Curado"
+                            data-text="Salle H109"
+                            data-link="equipe.html">
+                            Réseaux
+                        </td>
+                        <td>Libre</td>
+                        <td>Libre</td>
+                        <td>Web</td>
+
+                    </tr>
+                    <tr>
+                        <td>10h - 12h</td>
+
+                        <td>BDD</td>
+                        <td>Web</td>
+                        <td>Réseaux</td>
+                        <td>Libre</td>
+                        <td>Projet</td>
+                        <td>Réseaux</td>
+                    </tr>
+                    <tr>
+                        <td>14h - 16h</td>
+
+                        <td>Projet</td>
+                        <td>Libre</td>
+                        <td>Web</td>
+                        <td>BDD</td>
+                        <td>Réseaux</td>
+                        <td>BDD</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
 
@@ -75,6 +136,22 @@
         </div>
 
     </footer>
+
+    <div id="popup" class="popup">
+    <div class="popup-content">
+
+        <span class="close">&times;</span>
+
+        <h2 id="popup-name"></h2>
+        <p id="popup-subject"></p>
+        <p id="popup-text"></p>
+
+        <a id="popup-link" class="popup-btn" href="#">
+            Voir le professeur
+        </a>
+
+    </div>
+</div>
 
     <script src="../js/script.js"></script>
     

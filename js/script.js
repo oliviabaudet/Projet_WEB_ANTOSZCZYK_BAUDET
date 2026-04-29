@@ -131,6 +131,7 @@ if (menuIcon && nav) {
 // =======================
 
 const popup = document.getElementById("popup");
+const popupLink = document.getElementById("popup-link");
 const popupImg = document.getElementById("popup-img");
 const popupName = document.getElementById("popup-name");
 const popupSubject = document.getElementById("popup-subject");
@@ -176,8 +177,12 @@ document.querySelectorAll(".open-popup").forEach(btn => {
                 popupHours.parentElement.style.display = "none";
             }
         }
-
         popup.style.display = "flex";
+
+        // Rediriger vers la page équipe 
+        if (popupLink && btn.dataset.link) {
+            popupLink.href = btn.dataset.link;
+        }
     });
 });
 
