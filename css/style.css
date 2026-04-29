@@ -730,22 +730,28 @@ opacity: 0.8;
 }
 
 .planning {
-    width: 100%;
+    width: 95%;
+    max-width: 1400px;
+    margin: 30px auto;
     border-collapse: collapse;
-    margin-top: 20px;
-    font-size: 16px;
+    font-size : 16px;
+    
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+    border-radius: 12px;
+    overflow: hidden;
 }
 
 .planning th,
 .planning td {
     border: 1px solid #ccc;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
 }
 
 .planning th {
     background: #002b5c;
     color: white;
+    font-size: 15px;
 }
 
 .planning td {
@@ -753,11 +759,39 @@ opacity: 0.8;
 }
 
 .course {
+    font-weight: bold;
+    border-radius: 8px;
+    transition: transform 0.2s ease, filter 0.2s ease;
+    text-align: center;
     cursor: pointer;
-    font-weight: bold;   
+}
+
+.course.web {
+    background: #ec9393;
+    color : rgb(207, 33, 33);
+}
+
+.course.bdd {
+    background: #6ba8da;
+    color : rgb(45, 68, 159);
+}
+
+.course.reseaux {
+    background: #76d786;
+    color : rgb(4, 80, 2);
+}
+
+.course.projet {
+    background: #9e86e5;
+    color: rgb(67, 7, 140);
+}
+
+.course.libre {
+    background: #ceaa78;
+    color: #4e3204;
 }
 
 .course:hover {
-    background: #002b5c;
-    color: white;
+    transform: scale(1.05);
+    filter: brightness(1.05);
 }
