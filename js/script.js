@@ -90,11 +90,11 @@ if (form) {
     form.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        const name = form.querySelector("input[type='text']").value.trim();
-        const email = form.querySelector("input[type='email']").value.trim();
+        const objet = document.getElementById("objet").value.trim();
+        const email = document.getElementById("destinataire").value.trim();
         const message = form.querySelector("textarea").value.trim();
 
-        if (name === "" || email === "" || message === "") {
+        if (objet === "" || email === "" || message === "") {
             alert("Veuillez remplir tous les champs");
             return;
         }
@@ -138,6 +138,7 @@ const popupSubject = document.getElementById("popup-subject");
 const popupText = document.getElementById("popup-text");
 const popupEmail = document.getElementById("popup-email");
 const popupHours = document.getElementById("popup-hours");
+const popupContact = document.getElementById("popup-contact");
 const closeBtn = document.querySelector(".close");
 
 document.querySelectorAll(".open-popup").forEach(btn => {
@@ -177,12 +178,18 @@ document.querySelectorAll(".open-popup").forEach(btn => {
                 popupHours.parentElement.style.display = "none";
             }
         }
-        popup.style.display = "flex";
 
-        // Rediriger vers la page équipe 
+        // 🔥 AUTO EMAIL VERS CONTACT
+        if (popupContact && btn.dataset.email) {
+            popupContact.href = "contact.html?dest=" + encodeURIComponent(btn.dataset.email);
+        }
+
+        // Lien vers équipe (cours)
         if (popupLink && btn.dataset.link) {
             popupLink.href = btn.dataset.link;
         }
+
+        popup.style.display = "flex";
     });
 });
 
@@ -232,7 +239,7 @@ function closeMenu() {
 
 
 // =======================
-// DESTINATAIRE AUTO (CONTACT)
+// DESTINATAIRE AUTO (CONTACT PAGE)
 // =======================
 
 const params = new URLSearchParams(window.location.search);
@@ -243,16 +250,3 @@ const inputDest = document.getElementById("destinataire");
 if (dest && inputDest) {
     inputDest.value = dest;
 }
-
-const popupContact = document.getElementById("popup-contact");
-
-document.querySelectorAll(".open-popup").forEach(btn => {
-    btn.addEventListener("click", () => {
-
-        const email = btn.dataset.email;
-
-        if (popupContact && email) {
-            popupContact.href = "contact.html?dest=" + encodeURIComponent(email);
-        }
-    });
-});
