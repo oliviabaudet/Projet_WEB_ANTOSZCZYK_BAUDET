@@ -1,5 +1,9 @@
 :root {
     --blue: #0A316C;
+    --blue-dark: #002b5c;
+    --blue-light: #004a9f;
+    --grey-bg: #f4f4f4;
+    --text-dark: #333;
 }
 
 * {
@@ -14,7 +18,7 @@ justify-content: space-between;
 align-items: center;
 padding: 15px 30px;
 background: white;
-color: #002b5c;
+color: var(--blue-dark);
 border-bottom: 2px solid #e5e5e5;
 }
 
@@ -156,11 +160,11 @@ border-radius: 8px;
 button {
     margin-top: 10px;
     padding: 10px;
-    background: #002b5c;
+    background: var(--blue-dark);
     color: white;
     border: none;
     cursor: pointer;
-    border-radius: 8px; /* ✅ AJOUT */
+    border-radius: 8px;
     transition: 0.3s;
 }
 .courses {
@@ -284,7 +288,7 @@ footer {
     display: flex;
     align-items: center;
     padding: 20px 30px;
-    background: #002b5c;
+    background: var(--blue-dark);
     color: white;
 }
 
@@ -313,6 +317,7 @@ body {
 
 h1, h2, h3 {
     font-family: 'Montserrat', sans-serif;
+    color: var(--blue-dark);
 }
 
 main, section {
@@ -320,7 +325,8 @@ main, section {
 }
 
 .card {
-transition: transform 0.3s ease;
+    transition: transform 0.3s ease;
+    background: var(--grey-bg)
 }
 
 .card button {
@@ -400,7 +406,7 @@ opacity: 1;
 
 button:hover {
     transform: scale(1.05);
-    background: #004a9f;
+    background: var(--blue-light);
 }
 
 .logo img {
