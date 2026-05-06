@@ -1,8 +1,11 @@
+:root {
+    --blue: #0A316C;
+}
+
 * {
 margin: 0;
 padding: 0;
 box-sizing: border-box;
-font-family: Arial, sans-serif;
 }
 
 header {
@@ -305,6 +308,11 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
+    font-family: 'Open Sans', sans-serif;
+}
+
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
 }
 
 main, section {
