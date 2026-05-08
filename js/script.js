@@ -113,20 +113,6 @@ if (form) {
 
 
 // =======================
-// MENU MOBILE
-// =======================
-
-const menuIcon = document.querySelector(".menu-icon");
-const nav = document.querySelector("nav");
-
-if (menuIcon && nav) {
-    menuIcon.addEventListener("click", () => {
-        nav.classList.toggle("active");
-    });
-}
-
-
-// =======================
 // POPUP
 // =======================
 
@@ -249,4 +235,39 @@ const inputDest = document.getElementById("destinataire");
 
 if (dest && inputDest) {
     inputDest.value = dest;
+}
+
+// =======================
+// FORMULAIRE HACKATHON
+// =======================
+
+const hackathonForm = document.getElementById("hackathonForm");
+
+if (hackathonForm) {
+
+    hackathonForm.addEventListener("submit", function(e) {
+
+        e.preventDefault();
+
+        // Vérifie au moins un langage
+        const checkboxes = document.querySelectorAll('input[name="langages"]');
+
+        let checked = false;
+
+        checkboxes.forEach(box => {
+            if (box.checked) {
+                checked = true;
+            }
+        });
+
+        if (!checked) {
+            alert("Veuillez sélectionner au moins un langage.");
+            return;
+        }
+
+        alert("Inscription envoyée avec succès !");
+        hackathonForm.reset();
+
+    });
+
 }

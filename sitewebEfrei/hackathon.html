@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hackathon IA 2026</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <header>
+        <div id="sideMenu" class="side-menu">
+            <a href="accueil.html">Accueil</a>
+            <a href="cours.html">Cours</a>
+            <a href="equipe.html">Équipe</a>
+            <a href="contact.html">Contact</a>
+            <a href="apropos.html">À propos</a>
+            <a href="hackathon.html">Hackathon</a>
+        </div>
+
+        <div class="logo">
+            <a href="https://www.efrei.fr" target="_blank">
+                <img src="../images/logo.png" alt="Logo">
+            </a>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="accueil.html">Accueil</a></li>
+                <li><a href="cours.html">Cours</a></li>
+                <li><a href="equipe.html">Équipe</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="menu-icon">☰</li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="contact-container">
+
+        <div class="contact-card">
+
+            <h1>Inscription Hackathon IA 2026</h1>
+
+            <p class="subtitle">
+                Rejoignez 48h d’innovation autour de l’intelligence artificielle.
+            </p>
+
+            <form id="hackathonForm">
+
+                <label>Nom complet</label>
+                <input type="text" placeholder="Votre nom complet" required>
+
+                <label>Adresse email</label>
+                <input type="email" placeholder="Votre email" required>
+
+                <label>Niveau d'études</label>
+                <select required>
+                    <option value="">Choisir un niveau</option>
+                    <option>Lycée</option>
+                    <option>Cycle préparatoire</option>
+                    <option>Bachelor</option>
+                    <option>Cycle Ingénieur</option>
+                    <option>Mastère</option>
+                </select>
+
+                <label>Spécialité principale</label>
+                <select required>
+                    <option value="">Choisir une spécialité</option>
+                    <option>Développement Web</option>
+                    <option>Intelligence Artificielle</option>
+                    <option>Cybersécurité</option>
+                    <option>Data Science</option>
+                    <option>Cloud Computing</option>
+                    <option>Réseaux</option>
+                    <option>Systèmes Embarqués</option>
+                    <option>Je n'ai pas de spécialité principale</option>
+                </select>
+
+                <label>Expérience en programmation</label>
+
+                <div class="radio-group">
+                    <label><input type="radio" name="exp" required> Débutant</label>
+                    <label><input type="radio" name="exp"> Intermédiaire</label>
+                    <label><input type="radio" name="exp"> Avancé</label>
+                </div>
+
+                <label>Langages maîtrisés</label>
+
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="langages"> Python</label>
+                    <label><input type="checkbox" name="langages"> HTML/CSS/Java Script</label>
+                    <label><input type="checkbox" name="langages"> Java</label>
+                    <label><input type="checkbox" name="langages"> C</label>
+                    <label><input type="checkbox" name="langages"> SQL</label>
+                    <label><input type="checkbox" name="langages"> Linux</label>
+                </div>
+
+                <label>Pourquoi souhaitez-vous participer ?</label>
+                <textarea placeholder="Décrivez votre motivation..." required></textarea>
+
+                <button type="submit">Valider l'inscription</button>
+
+            </form>
+
+        </div>
+
+    </main>
+
+    <div id="overlay" class="overlay"></div>
+
+    <footer>
+
+        <a href="apropos.html" class="footer-about">À propos</a>
+
+        <p>© 2026 Efrei – Tous droits réservés</p>
+
+        <div class="socials">
+            <a href="https://www.youtube.com/efrei" target="_blank">
+                <img src="../images/youtube.png" alt="YouTube">
+            </a>
+
+            <a href="https://www.instagram.com/efrei_paris/" target="_blank">
+                <img src="../images/instagram.png" alt="Instagram">
+            </a>
+        </div>
+
+    </footer>
+
+    <script src="../js/script.js"></script>
+
+</body>
+</html>
