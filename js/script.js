@@ -165,14 +165,26 @@ document.querySelectorAll(".open-popup").forEach(btn => {
             }
         }
 
-        // 🔥 AUTO EMAIL VERS CONTACT
+        // AUTO EMAIL VERS CONTACT
         if (popupContact && btn.dataset.email) {
             popupContact.href = "contact.html?dest=" + encodeURIComponent(btn.dataset.email);
         }
 
-        // Lien vers équipe (cours)
-        if (popupLink && btn.dataset.link) {
-            popupLink.href = btn.dataset.link;
+       // BOUTON LIRE PLUS
+        if (popupLink) {
+
+            if (btn.dataset.link) {
+
+                popupLink.href = btn.dataset.link;
+                popupLink.style.display = "inline-block";
+
+            } 
+            
+            else {
+
+                popupLink.style.display = "none";
+
+            }
         }
 
         popup.style.display = "flex";

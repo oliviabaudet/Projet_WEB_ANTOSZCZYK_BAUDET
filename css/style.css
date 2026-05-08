@@ -311,7 +311,20 @@ transform: translateX(-50%);
     width: 100%;
     height: 200px;
     object-fit: cover;
-    object-position: center;
+    object-position: center top;
+    border-radius: 10px;
+}
+
+.teacher:nth-child(5) img {
+    object-position: center 20%;
+}
+
+.teacher:nth-child(9) img {
+    object-position: center 20%;
+}
+
+.teacher:nth-child(11) img {
+    object-position: center 20%;
 }
 
 html, body {
@@ -972,4 +985,115 @@ opacity: 0.8;
 .checkbox-group label {
     font-weight: normal;
     color: #333;
+}
+
+/* =========================
+   PAGE FORMATIONS
+========================= */
+
+.formations-page {
+    padding: 40px 20px;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.formations-hero {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.formations-hero h1 {
+    font-size: 42px;
+    color: #002b5c;
+    margin-bottom: 20px;
+}
+
+.formations-hero p {
+    max-width: 900px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.formations-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #002b5c;
+}
+
+.formations-section {
+    margin-bottom: 70px;
+}
+
+.formations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+}
+
+.formation-card {
+    background: white;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+
+    transition: 0.3s;
+}
+
+.formation-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+.formation-card h3 {
+    color: #002b5c;
+    margin-bottom: 15px;
+}
+
+.formation-card h4 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    color: #004a9f;
+}
+
+.formation-card p {
+    color: #555;
+    line-height: 1.7;
+}
+
+.formation-card ul {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.formation-card li {
+    margin-bottom: 8px;
+    color: #444;
+}
+
+.formations-projects {
+    margin-bottom: 50px;
+}
+
+.project-box {
+    background: #f4f4f4;
+    padding: 35px;
+    border-radius: 18px;
+    line-height: 1.8;
+    color: #444;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+@media (max-width: 768px) {
+
+    .formations-hero h1 {
+        font-size: 32px;
+    }
+
+    .formations-title {
+        font-size: 26px;
+    }
+
 }
