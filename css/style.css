@@ -51,6 +51,7 @@ text-decoration: underline;
 .hero {
 text-align: center;
 padding: 40px;
+clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 }
 
 .hero h1 {
@@ -103,7 +104,9 @@ width: 100%;
 height: 400px;
 object-fit: cover;
 display: none;
+filter: brightness(0.75) contrast(1.1) saturate(1.1);
 }
+    
 
 .slides img.active {
 display: block;
@@ -406,7 +409,8 @@ opacity: 1;
 
 button:hover {
     transform: scale(1.05);
-    background: var(--blue-light);
+    background: #81ECEC;
+    color: #002b5c;
 }
 
 .logo img {
@@ -775,28 +779,28 @@ opacity: 0.8;
 }
 
 .course.web {
-    background: #ec9393;
-    color : rgb(89, 3, 3);
+    background: #81ECEC; /* Cyan technologique */
+    color: #002b5c;
 }
 
 .course.bdd {
-    background: #6ba8da;
-    color : rgb(7, 25, 94);
+    background: #b9e7ff;
+    color: #002b5c;
 }
 
 .course.reseaux {
-    background: #76d786;
-    color : rgb(7, 58, 5);
+    background: #0A316C; /* Bleu académique */
+    color: white;
 }
 
 .course.projet {
-    background: #9e86e5;
-    color: rgb(39, 6, 81);
+    background: #d6f5ff;
+    color: #002b5c;
 }
 
 .course.libre {
-    background: #ceaa78;
-    color: #301e02;
+    background: #FDCB6E; /* Jaune électrique */
+    color: #4a3200;
 }
 
 .course:hover {
