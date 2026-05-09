@@ -887,7 +887,7 @@ opacity: 0.8;
     font-size: 42px;
     font-weight: bold;
     margin-bottom: 10px;
-    color: var(--blue);
+    color: var(--white);
 }
 
 .stat-card p {
