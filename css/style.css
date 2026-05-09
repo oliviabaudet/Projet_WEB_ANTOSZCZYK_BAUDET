@@ -163,7 +163,7 @@ width: 30%;
 padding: 20px;
 background: #f4f4f4;
 text-align: center;
-border-radius: 8px;
+border-radius: 15px;
 }
 
 button {
@@ -887,7 +887,7 @@ opacity: 0.8;
     font-size: 42px;
     font-weight: bold;
     margin-bottom: 10px;
-    color: var(--blue);
+    color: var(--white);
 }
 
 .stat-card p {
