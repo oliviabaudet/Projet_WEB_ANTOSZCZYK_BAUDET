@@ -42,9 +42,9 @@
     <main class="courses">
         <div class="planning-header">
             <h1>📅 Voici votre Planning</h1>
-            <p>EFREI Paris</p>
+            <p>Département Informatique - EFREI Paris</p>
             <p class="info-planning">
-                Cliquez sur un cours pour voir les détails du professeur
+                Cliquez sur un cours pour consulter les informations du professeur.
             </p>
             <p class="today">Aujourd’hui : Mercredi</p>
             <div class="stats">
@@ -76,22 +76,25 @@
 
                         <td class="course web open-popup"
                             data-name="Programmation Web"
-                            data-subject="Prof : Yvan Monka"
+                            data-subject="Professeur : Jacques Augustin"
                             data-text="Salle B001"
+                            data-email="jacques.augustin@efrei.fr"
                             data-link="equipe.html">
                             Web
                         </td>
                         <td class="course bdd open-popup"
                             data-name="Base de données"
-                            data-subject="Prof : Lucas Maths"
+                            data-subject="Professeure : Malika Charrad"
                             data-text="Salle H105"
+                            data-email="malika.charrad@efrei.fr"
                             data-link="equipe.html">
                             BDD
                         </td>
                         <td class="course reseaux open-popup"
                             data-name="Réseaux"
-                            data-subject="Prof : Timothée Curado"
+                            data-subject="Professeur : Youssef Ait El Mahjoub"
                             data-text="Salle H109"
+                            data-email="youssef.aitelmahjoub@efrei.fr"
                             data-link="equipe.html">
                             Réseaux
                         </td>
@@ -99,7 +102,8 @@
                         <td class="course libre">Libre</td>
                         <td class="course web open-popup"
                             data-name="Programmation Web"
-                            data-subject="Prof : Yvan Monka"
+                            data-subject="Professeur : Jacques Augustin"
+                            data-email="jacques.augustin@efrei.fr"
                             data-text="Salle B001"
                             data-link="equipe.html">
                             Web
@@ -110,22 +114,25 @@
 
                         <td class="course bdd open-popup"
                             data-name="Base de données"
-                            data-subject="Prof : Lucas Maths"
+                            data-subject="Professeure : Malika Charrad"
                             data-text="Salle H105"
+                            data-email="malika.charrad@efrei.fr"
                             data-link="equipe.html">
                             BDD
                         </td>
                         <td class="course web open-popup"
                             data-name="Programmation Web"
-                            data-subject="Prof : Yvan Monka"
+                            data-subject="Professeur : Jacques Augustin"
                             data-text="Salle B001"
+                            data-email="jacques.augustin@efrei.fr"
                             data-link="equipe.html">
                             Web
                         </td>
                         <td class="course reseaux open-popup"
                             data-name="Réseaux"
-                            data-subject="Prof : Timothée Curado"
+                            data-subject="Professeur : Youssef Ait El Mahjoub"
                             data-text="Salle H109"
+                            data-email="youssef.aitelmahjoub@efrei.fr"
                             data-link="equipe.html">
                             Réseaux
                         </td>
@@ -133,8 +140,9 @@
                         <td class="course projet">Projet</td>
                         <td class="course reseaux open-popup"
                             data-name="Réseaux"
-                            data-subject="Prof : Timothée Curado"
+                            data-subject="Professeur : Youssef Ait El Mahjoub"
                             data-text="Salle H109"
+                            data-email="youssef.aitelmahjoub@efrei.fr"
                             data-link="equipe.html">
                             Réseaux
                         </td>
@@ -146,29 +154,33 @@
                         <td class="course libre">Libre</td>
                         <td class="course web open-popup"
                             data-name="Programmation Web"
-                            data-subject="Prof : Yvan Monka"
+                            data-subject="Professeur : Jacques Augustin"
                             data-text="Salle B001"
+                            data-email="jacques.augustin@efrei.fr"
                             data-link="equipe.html">
                             Web
                         </td>
                         <td class="course bdd open-popup"
                             data-name="Base de données"
-                            data-subject="Prof : Lucas Maths"
+                            data-subject="Professeure : Malika Charrad"
                             data-text="Salle H105"
+                            data-email="malika.charrad@efrei.fr"
                             data-link="equipe.html">
                             BDD
                         </td>
                         <td class="course reseaux open-popup"
                             data-name="Réseaux"
-                            data-subject="Prof : Timothée Curado"
+                            data-subject="Professeur : Youssef Ait El Mahjoub"
                             data-text="Salle H109"
+                            data-email="youssef.aitelmahjoub@efrei.fr"
                             data-link="equipe.html">
                             Réseaux
                         </td>
                         <td class="course bdd open-popup"
                             data-name="Base de données"
-                            data-subject="Prof : Lucas Maths"
+                            data-subject="Professeure : Malika Charrad"
                             data-text="Salle H105"
+                            data-email="malika.charrad@efrei.fr"
                             data-link="equipe.html">
                             BDD
                         </td>
@@ -178,6 +190,30 @@
     </main>
 
     <div id="overlay" class="overlay"></div>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+
+        <span class="close">&times;</span>
+
+        <h2 id="popup-name">Informations</h2>
+
+        <p id="popup-subject"></p>
+        <p id="popup-text"></p>
+
+        <p id="popup-email-container">
+            <strong>Email :</strong>
+            <span id="popup-email"></span>
+        </p>
+
+        <a id="popup-link" class="popup-btn" href="#">
+            Voir plus
+        </a>
+
+    </div>
+</div>
+
+<script src="../js/script.js"></script>
 
     <footer>
 
@@ -197,23 +233,7 @@
 
     </footer>
 
-    <div id="popup" class="popup">
-    <div class="popup-content">
 
-        <span class="close">&times;</span>
-
-        <h2 id="popup-name">Informations du cours</h2>
-        <p id="popup-subject"></p>
-        <p id="popup-text"></p>
-
-        <a id="popup-link" class="popup-btn" href="#">
-            Voir le professeur
-        </a>
-
-    </div>
-</div>
-
-    <script src="../js/script.js"></script>
     
 </body>
 </html>
