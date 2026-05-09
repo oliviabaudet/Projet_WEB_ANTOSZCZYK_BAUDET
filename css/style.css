@@ -666,21 +666,6 @@ opacity: 0.8;
     text-align: center;
 }
 
-
-/* PAGE CONTACT - LAYOUT GLOBAL */
-.contact-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-
-    padding: 40px 20px;
-
-    width: 100%;
-    max-width: 1400px; /* 🔥 plus large */
-    margin: auto;
-}
-
 /* FORMULAIRE PLUS LARGE */
 .contact-card {
     flex: 3;
@@ -724,19 +709,6 @@ opacity: 0.8;
     gap: 10px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-    .contact-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-card,
-    .contact-info {
-        width: 100%;
-        max-width: 100%;
-    }
-}
 
 .contact-card h1 {
     margin-bottom: 10px;
@@ -1348,17 +1320,6 @@ opacity: 0.8;
     }
 }
 
-.contact-container {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 40px;
-
-    padding: 60px 20px;
-
-    max-width: 1400px;
-    margin: auto;
-}
 
 /* FORMULAIRE (GAUCHE) */
 .contact-card {
@@ -1445,17 +1406,7 @@ opacity: 0.8;
     margin-bottom: 10px;
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-    .contact-container {
-        flex-direction: column;
-    }
 
-    .contact-card,
-    .contact-info {
-        width: 100%;
-    }
-}
 
 .contact-header {
     text-align: center;

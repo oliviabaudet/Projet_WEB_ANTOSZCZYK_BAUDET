@@ -236,20 +236,6 @@ function closeMenu() {
     overlay.classList.remove("active");
 }
 
-
-// =======================
-// DESTINATAIRE AUTO (CONTACT PAGE)
-// =======================
-
-const params = new URLSearchParams(window.location.search);
-const dest = params.get("dest");
-
-const inputDest = document.getElementById("destinataire");
-
-if (dest && inputDest) {
-    inputDest.value = dest;
-}
-
 // =======================
 // FORMULAIRE HACKATHON
 // =======================
