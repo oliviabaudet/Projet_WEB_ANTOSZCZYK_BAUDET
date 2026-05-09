@@ -4,183 +4,251 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
+
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <header>
-        <div id="sideMenu" class="side-menu">
-            <a href="accueil.html">Accueil</a>
-            <a href="formations.html">Formations</a>
-            <a href="cours.html">Cours</a>
-            <a href="equipe.html">Équipe</a>
-            <a href="contact.html">Contact</a>
-            <a href="apropos.html">À propos</a>
-            <a href="hackathon.html">Hackathon</a>
+<header>
+    <div id="sideMenu" class="side-menu">
+        <a href="accueil.html">Accueil</a>
+        <a href="formations.html">Formations</a>
+        <a href="cours.html">Cours</a>
+        <a href="equipe.html">Équipe</a>
+        <a href="contact.html">Contact</a>
+        <a href="apropos.html">À propos</a>
+        <a href="hackathon.html">Hackathon</a>
+    </div>
+
+    <div class="logo">
+        <a href="https://www.efrei.fr" target="_blank">
+            <img src="../images/logo.png" alt="Logo">
+        </a>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="accueil.html">Accueil</a></li>
+            <li><a href="formations.html">Formations</a></li>
+            <li><a href="cours.html">Cours</a></li>
+            <li><a href="equipe.html">Équipe</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li class="menu-icon">☰</li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+<!-- HERO -->
+<section class="hero">
+    <h1>Département Informatique</h1>
+    <h2>Façonner les ingénieurs et experts du numérique de demain</h2>
+
+    <div class="carousel">
+        <button class="prev">&#10094;</button>
+
+        <div class="slides">
+            <img src="../images/slide1.jpg" class="active">
+            <img src="../images/slide2.webp">
+            <img src="../images/slide3.jpg">
         </div>
 
-        <div class="logo">
-            <a href="https://www.efrei.fr" target="_blank">
-                <img src="../images/logo.png" alt="Logo">
-            </a>
-        </div>
+        <div class="dots"></div>
+        <button class="next">&#10095;</button>
+    </div>
+</section>
 
-        <nav>
-            <ul>
-                <li><a href="accueil.html">Accueil</a></li>
-                <li><a href="formations.html">Formations</a></li>
-                <li><a href="cours.html">Cours</a></li>
-                <li><a href="equipe.html">Équipe</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li class="menu-icon">☰</li>
-            </ul>
-        </nav>
-    </header>
+<!-- CARDS -->
+<section class="cards">
 
-    <main>
+    <div class="card">
+        <h3>Présentation</h3>
+        <p>Découvrez notre département</p>
+        <button class="open-popup"
+            data-name="Présentation"
+            data-subject="Département Informatique"
+            data-text="Le département informatique de l'EFREI forme des experts en développement, réseaux, cybersécurité et intelligence artificielle. Les étudiants bénéficient d'un enseignement pratique et de projets concrets.">
+            Lire plus
+        </button>
+    </div>
 
-    <section class="hero">
-        <h1>Département Informatique</h1>
-        <h2>Façonner les ingénieurs et experts du numérique de demain</h2>
-        <br>
+    <div class="card">
+        <h3>Formations</h3>
+        <p>Voir les programmes</p>
+        <button class="open-popup"
+            data-name="Formations"
+            data-subject="Programmes"
+            data-text="Programmation web, bases de données, réseaux, IA et systèmes embarqués."
+            data-link="formations.html">
+            Voir
+        </button>
+    </div>
 
-        <div class="carousel">
-            <button class="prev">&#10094;</button>
+    <div class="card">
+        <h3>Actualités</h3>
+        <p>Dernières infos</p>
+        <button class="open-popup"
+            data-name="Actualités"
+            data-subject="Événements"
+            data-text="Hackathons, conférences et projets étudiants."
+        >
+            Consulter
+        </button>
+    </div>
 
-            <div class="slides">
-                <img src="../images/slide1.jpg">
-                <img src="../images/slide2.webp">
-                <img src="../images/slide3.jpg">
-            </div>
-            
-            <div class="dots"></div>
+</section>
 
-            <button class="next">&#10095;</button>
-        </div>
-    </section>
+<!-- STATS -->
+<section class="stats">
+    <div>95% satisfaction</div>
+    <div>92% insertion pro</div>
+    <div>2000+ entreprises</div>
+    <div>5000 diplômés</div>
+</section>
 
-    <section class="cards">
-        <div class="card">
-            <h3>Présentation</h3>
-            <p>Découvrez notre département</p>
-            <button class="open-popup"
-                data-name="Présentation"
-                data-subject="Département Informatique"
-                data-text="Le département informatique de l'EFREI forme des experts en développement, réseaux, cybersécurité et intelligence artificielle. Les étudiants bénéficient d'un enseignement pratique, de projets concrets et d'un accompagnement vers le monde professionnel.">
-                Lire plus
-            </button>
-        </div>
+<!-- EXPERTISE + RECHERCHE -->
+<section class="research-container">
 
-        <div class="card">
-            <h3>Nos Formations</h3>
-            <p>Voir les programmes</p>
-            <button class="open-popup"
-                data-name="Nos Formations"
-                data-subject="Programmes disponibles"
-                data-text="Nous proposons des formations en programmation web, bases de données, réseaux, systèmes embarqués et intelligence artificielle. Chaque parcours inclut des projets pratiques, du travail en équipe et des situations réelles."
-                data-link="formations.html">
-                Voir
-            </button>
-        </div>
+    <div class="expertise">
+        <h2>Domaines d’expertise</h2>
 
-        <div class="card">
-            <h3>Actualités</h3>
-            <p>Dernières infos</p>
-            <button class="open-popup"
-                data-name="Actualités"
-                data-subject="Événements & nouveautés"
-                data-text="Découvrez les dernières actualités du département : hackathons, conférences, projets étudiants et partenariats avec des entreprises technologiques. Restez informé de la vie du campus.">
-                Consulter
-            </button>
-        </div>
-    </section>
+        <div class="expertise-grid">
 
-    <section class="stats">
-        <div>95% de satisfaction étudiante</div>
-        <div>92% d’insertion professionnelle</div>
-        <div>2000+ entreprises partenaires</div>
-        <div>5000 diplômés du numérique</div>
-    </section>
-
-    <section class="news-section">
-
-        <h2>Actualités & Événements</h2>
-
-        <div class="news-container">
-
-            <div class="news-card">
-                <h3>Journée Portes Ouvertes</h3>
-                <p>Découvrez le campus EFREI de Villejuif et rencontrez les étudiants.</p>
-
-                <a href="https://www.efrei.fr/evenement/journees-portes-ouvertes/" target="_blank" class="news-btn">
-                En savoir plus
-                </a>
-            </div>
-
-            <div class="news-card">
-                <h3>Hackathon IA 2026</h3>
-                <p>48h de challenge autour de l’intelligence artificielle et de l’innovation.</p>
-
-                <a href="hackathon.html" class="news-btn">
-                    Participer
-                </a>
+            <div class="expertise-card">
+                <h3>Intelligence Artificielle</h3>
+                <p>Deep Learning, vision par ordinateur, modèles génératifs.</p>
             </div>
 
-            <div class="news-card">
-                <h3>Conférence Cybersécurité</h3>
-                <p>Intervention d’experts en cyberdéfense et sécurité des réseaux.</p>
-
-                <a href="https://www.efrei.fr/mastere-cybersecurite/" 
-                target="_blank"
-                class="news-btn">
-                Voir l’événement
-                </a>
+            <div class="expertise-card">
+                <h3>Cybersécurité</h3>
+                <p>Protection des systèmes, cryptographie, confiance numérique.</p>
             </div>
-        </div>
-    </section>
 
-    <section class="quick-links">
+            <div class="expertise-card">
+                <h3>Big Data</h3>
+                <p>Analyse de données massives et architecture distribuée.</p>
+            </div>
 
-        <h2>Voir plus</h2>
+            <div class="expertise-card">
+                <h3>Cloud Computing</h3>
+                <p>Infrastructures cloud et systèmes scalables.</p>
+            </div>
 
-        <div class="quick-buttons">
-
-            <a href="formations.html" class="quick-btn">Voir les formations</a>
-
-            <a href="https://www.efrei.fr/parcoursup/" class="quick-btn">Admissions</a>
-
-            <a href="contact.html" class="quick-btn">Nous contacter</a>
-
-        </div>
-
-    </section>
-
-    </main>
-
-    <div id="popup" class="popup">
-        <div class="popup-content">
-            <span class="close">&times;</span>
-
-            <img id="popup-img" class="popup-img">
-
-            <h2 id="popup-name"></h2>
-
-            <p class="popup-subject" id="popup-subject"></p>
-
-            <p id="popup-text"></p>
-
-            <p><strong>Horaires :</strong> <span id="popup-hours"></span></p>
-            <a id="popup-link" class="popup-btn" href="#">
-                Lire plus
-            </a>
         </div>
     </div>
 
-    <div id="overlay" class="overlay"></div>
-    
-    <footer>
+    <div class="research">
+        <h2>Recherche & Projets</h2>
+
+        <ul>
+            <li>IA appliquée à la cybersécurité (EFREI + entreprises)</li>
+            <li>Réseaux distribués et systèmes cloud</li>
+            <li>Deep learning et vision par ordinateur</li>
+            <li>Data engineering avec partenaires industriels</li>
+        </ul>
+
+    </div>
+
+</section>
+
+<!-- VIE ÉTUDIANTE + PARTENARIATS + CARRIÈRES (fusion propre) -->
+<section class="campus-life">
+
+    <h2>Vie étudiante & insertion professionnelle</h2>
+
+    <div class="campus-grid">
+
+        <div class="campus-card">
+            <h3>Campus & outils</h3>
+            <p>Labs modernes, coworking, OpenClassrooms, LinkedIn Learning.</p>
+        </div>
+
+        <div class="campus-card">
+            <h3>Clubs & projets</h3>
+            <p>Programmation, robotique, e-sport, cybersécurité (CTF).</p>
+        </div>
+
+        <div class="campus-card">
+            <h3>Partenaires</h3>
+            <p>Google, AWS, Microsoft, Capgemini, Thales, Airbus, startups IA.</p>
+        </div>
+
+        <div class="campus-card">
+            <h3>Débouchés</h3>
+            <p>DevOps, Data Scientist, Software Engineer, Scrum Master.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ACTUALITÉS -->
+<section class="news-section">
+
+    <h2>Actualités & Événements</h2>
+
+    <div class="news-container">
+
+        <div class="news-card">
+            <h3>Journée Portes Ouvertes</h3>
+            <p>Découvrez le campus EFREI de Villejuif.</p>
+            <a href="https://www.efrei.fr/evenement/journees-portes-ouvertes/" target="_blank" class="news-btn">
+                En savoir plus
+            </a>
+        </div>
+
+        <div class="news-card">
+            <h3>Hackathon IA</h3>
+            <p>48h d’innovation en intelligence artificielle.</p>
+            <a href="hackathon.html" class="news-btn">Participer</a>
+        </div>
+
+        <div class="news-card">
+            <h3>Conférence Cybersécurité</h3>
+            <p>Experts en cyberdéfense et sécurité.</p>
+            <a href="https://www.efrei.fr/mastere-cybersecurite/" target="_blank" class="news-btn">
+                Voir
+            </a>
+        </div>
+
+    </div>
+
+</section>
+
+<!-- CTA -->
+<section class="quick-links">
+
+    <h2>Aller plus loin</h2>
+
+    <div class="quick-buttons">
+        <a href="formations.html" class="quick-btn">Formations</a>
+        <a href="https://www.efrei.fr/parcoursup/" class="quick-btn">Admissions</a>
+        <a href="contact.html" class="quick-btn">Contact</a>
+    </div>
+
+</section>
+
+</main>
+
+<!-- POPUP -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close">&times;</span>
+
+        <h2 id="popup-name"></h2>
+        <p class="popup-subject" id="popup-subject"></p>
+        <p id="popup-text"></p>
+
+        <a id="popup-link" class="popup-btn" href="#">Voir plus</a>
+    </div>
+</div>
+
+<div id="overlay" class="overlay"></div>
+
+<footer>
 
     <a href="apropos.html" class="footer-about">À propos</a>
 
@@ -188,17 +256,17 @@
 
     <div class="socials">
         <a href="https://www.youtube.com/efrei" target="_blank">
-            <img src="../images/youtube.png" alt="YouTube">
+            <img src="../images/youtube.png">
         </a>
 
         <a href="https://www.instagram.com/efrei_paris/" target="_blank">
-            <img src="../images/instagram.png" alt="Instagram">
+            <img src="../images/instagram.png">
         </a>
     </div>
 
 </footer>
 
-    <script src="../js/script.js"></script>
-    
+<script src="../js/script.js"></script>
+
 </body>
 </html>

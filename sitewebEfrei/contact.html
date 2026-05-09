@@ -38,36 +38,268 @@
         </nav>
     </header>
 
-    <section class="contact-container">
+    <main>
 
-        <div class="contact-card">
+        <!-- HEADER -->
+        <section class="contact-header">
 
-            <h1>Contactez-nous</h1>
+            <h1>Contact & Admissions</h1>
 
-            <p class="subtitle">
-                Envoyez un message à un professeur ou à l'administration
+            <p>
+                Retrouvez ici toutes les informations pour contacter le département informatique,
+                comprendre les modalités d’admission et accéder au campus.
             </p>
 
-            <form id="contactForm">
+        </section>
 
-                <label>Destinataire</label>
-                <input type="email" id="destinataire" placeholder="Email du destinataire" required>
+        <!-- FORMULAIRE -->
+        <section class="contact-container">
 
-                <label>Objet</label>
-                <input type="text" id="objet" placeholder="Objet du message" required>
+            <div class="contact-card">
 
-                <label>Message</label>
-                <textarea placeholder="Votre message..." required></textarea>
+                <h2>Envoyer une demande</h2>
 
-                <button type="submit">Envoyer le message</button>
+                <p class="subtitle">
+                    Les champs marqués d'un astérisque (*) sont obligatoires.
+                </p>
 
-            </form>
+                <form id="contactForm">
 
-        </div>
+                    <label>Adresse e-mail *</label>
+                    <input type="email" placeholder="ex : nom@exemple.com" required>
 
-    </section>
+                    <label>Nom *</label>
+                    <input type="text" placeholder="Votre nom" required>
 
-    <div id="overlay" class="overlay"></div>
+                    <label>Prénom *</label>
+                    <input type="text" placeholder="Votre prénom" required>
+
+                    <label>Date de naissance</label>
+                    <input type="date">
+
+                    <label>Je suis *</label>
+                    <select required>
+                        <option value="">-- Sélectionnez --</option>
+                        <option>Intéressé par l'école</option>
+                        <option>Candidat - suivi du dossier de candidature</option>
+                        <option>Candidat - via parcoursup</option>
+                        <option>Un nouvel inscrit à l'Efrei</option>
+                        <option>Étudiant à l'Efrei depuis plus d'un an</option>
+                        <option>Un ancien étudiant de l'Efrei et je souhaite récupérer mon diplôme</option>
+                        <option>Une entreprise</option>
+                        <option>Tuteur d'un étudiant</option>
+                        <option>Autre</option>
+                    </select>
+
+                    <label>Sujet *</label>
+                    <input type="text" placeholder="Objet de votre demande" required>
+
+                    <label>Description *</label>
+                    <textarea placeholder="Saisissez les détails de votre demande. L'équipe en charge vous répondra dans les plus brefs délais." required></textarea>
+
+                    <button type="submit">Envoyer la demande</button>
+
+                </form>
+
+            </div>
+        </section>
+
+        <!-- INFOS EN BAS -->
+        <section class="contact-info-bottom">
+
+            <div class="info-box">
+
+                <h3>📍 Coordonnées du département</h3>
+
+                <p>
+                    <strong>Campus de Villejuif – EFREI Paris</strong><br><br>
+
+                    📍 30-32 Avenue de la République<br>
+                    94800 Villejuif, France<br><br>
+
+                    📞 Téléphone : +33 1 46 00 00 00<br>
+                    ✉ Email : contact@efrei.fr<br><br>
+
+                    🕒 Horaires : Lundi – Vendredi, 9h00 – 18h00
+                </p>
+
+            </div>
+
+            <div class="info-box">
+
+                <h3>🎓 Procédure d’admission</h3>
+
+                <p>
+                    Les admissions à l’EFREI dépendent de votre niveau d’études et se font via plusieurs voies :
+                </p>
+
+                <!-- ACCORDÉON -->
+                <div class="accordion">
+
+                    <button class="accordion-btn">📘 Post-bac (Parcoursup + Puissance Alpha)</button>
+                    <div class="accordion-content">
+                        <p>
+                            Les élèves de Terminale générale et STI2D doivent candidater sur <strong>Parcoursup</strong> et choisir le concours <strong>Puissance Alpha</strong>.<br><br>
+
+                            La sélection repose sur :
+                            <br>• Étude du dossier scolaire
+                            <br>• Épreuves écrites du concours
+                            <br><br>
+
+                            Ce parcours permet d’intégrer la <strong>classe préparatoire intégrée</strong> de l’EFREI.
+                        </p>
+                    </div>
+
+                    <button class="accordion-btn">📗 Admissions parallèles (Bac+1 à Bac+3)</button>
+                    <div class="accordion-content">
+                        <p>
+                            Les étudiants en université, BTS, BUT ou école d’ingénieur peuvent intégrer l’EFREI via le concours <strong>Puissance Alpha Rebond</strong>.<br><br>
+
+                            Processus :
+                            <br>• Dossier académique
+                            <br>• Entretien de motivation<br><br>
+
+                            L’intégration se fait en cycle ingénieur (Bac+2 ou Bac+3 selon profil).
+                        </p>
+                    </div>
+
+                    <button class="accordion-btn">📙 Concours CPGE (classes préparatoires)</button>
+                    <div class="accordion-content">
+                        <p>
+                            Les étudiants issus de classes préparatoires scientifiques passent le concours <strong>Puissance Alpha CPGE</strong> via le portail SCEI.<br><br>
+
+                            Évaluation :
+                            <br>• Épreuves écrites
+                            <br>• Classement national du concours
+                        </p>
+                    </div>
+
+                    <button class="accordion-btn">🌍 Candidats internationaux</button>
+                    <div class="accordion-content">
+                        <p>
+                            Les étudiants étrangers peuvent candidater via Parcoursup ou directement selon leur pays d’origine.<br><br>
+
+                            Une attention particulière est portée à :
+                            <br>• Résultats académiques
+                            <br>• Niveau de langue
+                            <br>• Motivation et projet professionnel
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="info-box">
+
+                <h3>❓ FAQ – Études, admission & vie étudiante</h3>
+
+                <p>
+                    Retrouvez les réponses aux questions les plus fréquentes sur les études à l’EFREI,
+                    les frais de scolarité et la vie sur le campus.
+                </p>
+
+                <!-- ACCORDÉON FAQ -->
+
+                <div class="accordion">
+
+                    <button class="accordion-btn">💰 Quels sont les frais de scolarité ?</button>
+                    <div class="accordion-content">
+                        <p>
+                            Les frais de scolarité à l’EFREI varient selon le programme et le niveau d’études.<br><br>
+
+                            📘 Programme Grande École (cycle ingénieur) : environ <strong>11 000 € à 11 500 € par an</strong><br>
+                            📗 Bachelors : environ <strong>7 000 € à 9 000 € par an</strong><br>
+                            📙 Masters / spécialisations : environ <strong>10 000 € à 11 000 € par an</strong><br><br>
+
+                            👉 En alternance, les frais sont généralement <strong>pris en charge par l’entreprise</strong>.<br><br>
+
+                            💡 Des aides existent : bourses, financement bancaire et dispositifs de soutien aux étudiants.
+                        </p>
+                    </div>
+
+                    <button class="accordion-btn">🎓 Comment fonctionnent les admissions ?</button>
+                    <div class="accordion-content">
+                        <p>
+                            Les admissions se font selon plusieurs voies :<br><br>
+
+                            • Post-bac via Parcoursup et le concours Puissance Alpha<br>
+                            • Admissions parallèles (Bac+1 à Bac+3) sur dossier et entretien<br>
+                            • Concours pour les classes préparatoires (CPGE)<br>
+                            • Candidats internationaux selon leur parcours<br><br>
+
+                            Chaque candidature est étudiée sur le dossier académique et la motivation.
+                        </p>
+                    </div>
+
+                    <button class="accordion-btn">🏫 Comment est la vie sur le campus ?</button>
+                    <div class="accordion-content">
+                        <p>
+                            La vie étudiante à l’EFREI est dynamique et très active :<br><br>
+
+                            • Associations étudiantes<br>
+                            • Hackathons et projets tech<br>
+                            • Événements étudiants réguliers<br>
+                            • Vie de campus à Villejuif près de Paris<br><br>
+
+                            Les étudiants participent aussi à de nombreux projets en groupe tout au long de l’année.
+                        </p>
+                    </div>
+
+                    <button class="accordion-btn">📚 Y a-t-il des stages obligatoires ?</button>
+                    <div class="accordion-content">
+                        <p>
+                            Oui, les stages sont obligatoires dans la plupart des cursus.<br><br>
+
+                            Ils permettent aux étudiants d’acquérir une expérience professionnelle
+                            en entreprise dès les premières années et jusqu’au cycle ingénieur.
+                        </p>
+                    </div>
+
+                    <button class="accordion-btn">🏠 L’école aide-t-elle pour le logement ?</button>
+                    <div class="accordion-content">
+                        <p>
+                            L’EFREI ne propose pas de campus résidentiel, mais aide les étudiants à trouver un logement.<br><br>
+
+                            Des partenariats avec des résidences étudiantes et plateformes de logement sont disponibles
+                            pour faciliter l’installation en région parisienne.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="info-box">
+
+                <h3>🚇 Plan d’accès</h3>
+
+                <p>
+                    📍 Campus EFREI – Villejuif facilement accessible depuis Paris<br><br>
+
+                    🚇 Métro : Ligne 7 (Villejuif – Louis Aragon)<br>
+                    🚇 Futur accès : Ligne 15 (Grand Paris Express)<br>
+                    🚋 Tram : T7<br>
+                    🚌 Bus : plusieurs lignes desservent le campus
+                </p>
+
+                <!-- CARTE INTERACTIVE -->
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps?q=EFREI%20Paris%20Villejuif&output=embed"
+                        width="100%"
+                        height="300"
+                        style="border:0; border-radius: 12px; margin-top: 15px;"
+                        allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
 
     <footer>
 

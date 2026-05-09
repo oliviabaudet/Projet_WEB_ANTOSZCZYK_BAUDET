@@ -1201,3 +1201,485 @@ opacity: 0.8;
     }
 
 }
+
+/* =========================
+   VIE ÉTUDIANTE + PARTENARIATS
+========================= */
+
+.campus-life,
+.partnerships {
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.campus-life h2,
+.partnerships h2 {
+    text-align: center;
+    color: #002b5c;
+    margin-bottom: 30px;
+}
+
+/* 🔥 GRILLE VIE ÉTUDIANTE */
+.campus-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.campus-card {
+    background: #f4f7fc;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.campus-card:hover {
+    transform: translateY(-5px);
+}
+
+
+/* =========================
+   PARTENARIATS 
+========================= */
+
+.partnerships {
+    padding: 60px 40px;
+    max-width: 1100px;
+    margin: auto;
+    text-align: center;
+}
+
+.partnerships h2 {
+    color: #002b5c;
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+
+.partners-intro {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    color: #555;
+    line-height: 1.6;
+}
+
+/* GRILLE */
+.partners-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* CARTE */
+.partner-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.partner-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.partner-card h3 {
+    color: #002b5c;
+    margin-bottom: 10px;
+}
+
+.partner-card p {
+    color: #555;
+    font-weight: 500;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .partners-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.career {
+    padding: 60px 40px;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.career h2 {
+    color: #002b5c;
+    margin-bottom: 40px;
+}
+
+.career-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.career-card {
+    background: #f4f7fc;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+    transition: 0.3s;
+}
+
+.career-card:hover {
+    transform: translateY(-6px);
+}
+
+.career-card h3 {
+    color: #002b5c;
+    margin-bottom: 10px;
+}
+
+.career-card p {
+    color: #555;
+    line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+    .career-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contact-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+
+    padding: 60px 20px;
+
+    max-width: 1400px;
+    margin: auto;
+}
+
+/* FORMULAIRE (GAUCHE) */
+.contact-card {
+    flex: 2;
+    background: white;
+    padding: 30px;
+
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+}
+
+/* TITRE */
+.contact-card h1 {
+    color: #002b5c;
+    margin-bottom: 10px;
+}
+
+/* SUBTITLE */
+.subtitle {
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* FORM */
+.contact-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-card label {
+    font-weight: bold;
+    color: #002b5c;
+}
+
+.contact-card input,
+.contact-card textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.contact-card textarea {
+    min-height: 180px;
+    resize: vertical;
+}
+
+/* BOUTON */
+.contact-card button {
+    margin-top: 15px;
+    padding: 12px;
+    background: #002b5c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* DROITE INFOS */
+.contact-info {
+    flex: 1;
+    padding: 20px;
+}
+
+.contact-info h2 {
+    color: #002b5c;
+    margin-bottom: 20px;
+}
+
+.info-box {
+    background: #f4f7fc;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+}
+
+.info-box h3 {
+    color: #002b5c;
+    margin-bottom: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .contact-container {
+        flex-direction: column;
+    }
+
+    .contact-card,
+    .contact-info {
+        width: 100%;
+    }
+}
+
+.contact-header {
+    text-align: center;
+    padding: 60px 20px 20px 20px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.contact-header h1 {
+    color: #002b5c;
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.contact-header p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* LAYOUT GLOBAL */
+.contact-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    align-items: flex-start;
+
+    max-width: 1400px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* FORM */
+.contact-card {
+    flex: 2;
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+}
+
+.contact-card h2 {
+    color: #002b5c;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.contact-card form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contact-card label {
+    font-weight: bold;
+    color: #002b5c;
+}
+
+.contact-card input,
+.contact-card textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.contact-card textarea {
+    min-height: 160px;
+    resize: vertical;
+}
+
+.contact-card button {
+    background: #002b5c;
+    color: white;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+/* INFOS */
+.contact-info {
+    flex: 1;
+}
+
+.info-box {
+    background: #f4f7fc;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    transition: 0.3s;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+}
+
+.info-box h3 {
+    color: #002b5c;
+    margin-bottom: 10px;
+}
+
+.info-box p {
+    color: #444;
+    line-height: 1.6;
+}
+
+/* MAP PLACEHOLDER */
+.map-placeholder {
+    margin-top: 10px;
+    height: 150px;
+    background: #ddd;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #555;
+    font-size: 14px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}
+
+.contact-info-bottom {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.info-box {
+    text-align: center;
+}
+
+.info-box p {
+    line-height: 1.8;
+}
+
+.accordion-btn {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+
+    background: #002b5c;
+    color: white;
+
+    border: none;
+    border-radius: 8px;
+
+    cursor: pointer;
+    text-align: left;
+
+    transition: 0.3s;
+}
+
+.accordion-btn:hover {
+    background: #004a9f;
+}
+
+.accordion-content {
+    display: none;
+
+    padding: 15px;
+    background: #f4f7fc;
+
+    border-radius: 8px;
+    margin-top: 5px;
+}
+
+.map-container iframe {
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+.contact-info-bottom {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+
+    max-width: 1400px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+/* Le dernier bloc (plan d'accès) prend toute la largeur */
+.contact-info-bottom .info-box:last-child {
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 1000px) {
+    .contact-info-bottom {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info-bottom .info-box:last-child {
+        grid-column: auto;
+    }
+}
+
+.info-box {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.info-box:hover {
+    transform: translateY(-5px);
+}
+
+.contact-header {
+    margin-bottom: 30px;
+}
+
+.contact-container {
+    margin-bottom: 40px;
+}

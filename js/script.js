@@ -83,19 +83,20 @@ if (slides.length > 0) {
 // =======================
 // FORMULAIRE CONTACT
 // =======================
-
 const form = document.getElementById("contactForm");
 
 if (form) {
     form.addEventListener("submit", function (e) {
         e.preventDefault();
 
-        const objet = document.getElementById("objet").value.trim();
-        const email = document.getElementById("destinataire").value.trim();
-        const message = form.querySelector("textarea").value.trim();
+        const email = form.querySelector('input[type="email"]').value.trim();
+        const nom = form.querySelectorAll('input')[1].value.trim();
+        const prenom = form.querySelectorAll('input')[2].value.trim();
+        const sujet = form.querySelector('input[type="text"]').value.trim();
+        const description = form.querySelector("textarea").value.trim();
 
-        if (objet === "" || email === "" || message === "") {
-            alert("Veuillez remplir tous les champs");
+        if (!email || !nom || !prenom || !sujet || !description) {
+            alert("Veuillez remplir tous les champs obligatoires (*)");
             return;
         }
 
@@ -106,7 +107,7 @@ if (form) {
             return;
         }
 
-        alert("Message envoyé avec succès !");
+        alert("Demande envoyée avec succès !");
         form.reset();
     });
 }
@@ -283,3 +284,18 @@ if (hackathonForm) {
     });
 
 }
+
+//Page contact
+const accButtons = document.querySelectorAll(".accordion-btn");
+
+accButtons.forEach(btn => {
+    btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+
+        if (content.style.display === "block") {
+            content.style.display = "none";
+        } else {
+            content.style.display = "block";
+        }
+    });
+});
