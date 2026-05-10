@@ -256,3 +256,18 @@ accButtons.forEach(btn => {
     });
 });
 
+const jours = [
+    "Dimanche",
+    "Lundi",
+    "Mardi",
+    "Mercredi",
+    "Jeudi",
+    "Vendredi",
+    "Samedi"
+];
+
+const aujourdHui = new Date();
+const jourActuel = jours[aujourdHui.getDay()];
+
+document.getElementById("todayBadge").textContent =
+    `Semaine active — ${jourActuel}`;
