@@ -1740,7 +1740,13 @@ opacity: 0.8;
     border-radius: 14px;
     background: linear-gradient(135deg, #81ECEC, #0A316C);
     color : white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
+
 .planning-stats .stat-number {
     font-size: 32px;
 }
@@ -1804,11 +1810,6 @@ opacity: 0.8;
 /* Responsive */
 @media (max-width: 1200px) {
 
-    .planning-layout {
-        flex-direction: column;
-        align-items: center;
-    }
-
     .planning-stats {
         width: 100%;
         max-width: 700px;
@@ -1854,3 +1855,19 @@ opacity: 0.8;
 .summary-item strong {
     color: #002b5c;
 }
+
+.planning-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+.planning-stats {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: auto;
+    flex-shrink: 0;
+}
+
