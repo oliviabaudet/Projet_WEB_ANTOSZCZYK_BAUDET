@@ -1,7 +1,3 @@
-// =======================
-// CAROUSEL
-// =======================
-
 let slideIndex = 0;
 const slides = document.querySelectorAll(".slides img");
 const dotsContainer = document.querySelector(".dots");
@@ -39,7 +35,6 @@ function resetAutoSlide() {
     startAutoSlide();
 }
 
-// INIT CAROUSEL
 if (slides.length > 0) {
 
     if (dotsContainer) {
@@ -79,10 +74,6 @@ if (slides.length > 0) {
     }
 }
 
-
-// =======================
-// FORMULAIRE CONTACT
-// =======================
 const form = document.getElementById("contactForm");
 
 if (form) {
@@ -113,10 +104,6 @@ if (form) {
 }
 
 
-// =======================
-// POPUP
-// =======================
-
 const popup = document.getElementById("popup");
 const popupLink = document.getElementById("popup-link");
 const popupImg = document.getElementById("popup-img");
@@ -131,12 +118,10 @@ const closeBtn = document.querySelector(".close");
 document.querySelectorAll(".open-popup").forEach(btn => {
     btn.addEventListener("click", () => {
 
-        // TEXTE
         popupName.textContent = btn.dataset.name || "";
         popupSubject.textContent = btn.dataset.subject || "";
         popupText.textContent = btn.dataset.text || "";
 
-        // IMAGE
         if (popupImg) {
             if (btn.dataset.img) {
                 popupImg.src = btn.dataset.img;
@@ -146,7 +131,6 @@ document.querySelectorAll(".open-popup").forEach(btn => {
             }
         }
 
-        // EMAIL
         if (popupEmail && popupEmail.parentElement) {
             if (btn.dataset.email) {
                 popupEmail.textContent = btn.dataset.email;
@@ -156,7 +140,6 @@ document.querySelectorAll(".open-popup").forEach(btn => {
             }
         }
 
-        // HORAIRES
         if (popupHours && popupHours.parentElement) {
             if (btn.dataset.hours) {
                 popupHours.textContent = btn.dataset.hours;
@@ -166,12 +149,10 @@ document.querySelectorAll(".open-popup").forEach(btn => {
             }
         }
 
-        // AUTO EMAIL VERS CONTACT
         if (popupContact && btn.dataset.email) {
             popupContact.href = "contact.html?dest=" + encodeURIComponent(btn.dataset.email);
         }
 
-       // BOUTON LIRE PLUS
         if (popupLink) {
 
             if (btn.dataset.link) {
@@ -192,7 +173,6 @@ document.querySelectorAll(".open-popup").forEach(btn => {
     });
 });
 
-// FERMETURE POPUP
 if (closeBtn) {
     closeBtn.addEventListener("click", () => {
         popup.style.display = "none";
@@ -205,10 +185,6 @@ window.addEventListener("click", (e) => {
     }
 });
 
-
-// =======================
-// SIDE MENU
-// =======================
 
 const menuBtn = document.querySelector(".menu-icon");
 const sideMenu = document.getElementById("sideMenu");
@@ -236,10 +212,6 @@ function closeMenu() {
     overlay.classList.remove("active");
 }
 
-// =======================
-// FORMULAIRE HACKATHON
-// =======================
-
 const hackathonForm = document.getElementById("hackathonForm");
 
 if (hackathonForm) {
@@ -248,7 +220,6 @@ if (hackathonForm) {
 
         e.preventDefault();
 
-        // Vérifie au moins un langage
         const checkboxes = document.querySelectorAll('input[name="langages"]');
 
         let checked = false;
@@ -271,7 +242,6 @@ if (hackathonForm) {
 
 }
 
-//Page contact
 const accButtons = document.querySelectorAll(".accordion-btn");
 
 accButtons.forEach(btn => {
