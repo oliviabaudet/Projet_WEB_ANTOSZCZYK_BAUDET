@@ -790,8 +790,8 @@ opacity: 0.8;
 }
 
 .course.reseaux {
-    background: #0A316C; /* Bleu académique */
-    color: #7cabf2;
+    background: #6390d3; /* Bleu académique */
+    color: black;
 }
 
 .course.projet {
@@ -1750,4 +1750,107 @@ opacity: 0.8;
 .planning {
     flex: 1;
     margin: 0;
+}
+
+/* ===== PAGE COURS ===== */
+
+.courses {
+    width: 100%;
+    padding: 40px 20px;
+}
+
+.planning-top {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.planning-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.planning-header h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.planning-subtitle {
+    font-size: 18px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+.info-planning {
+    margin-top: 15px;
+}
+
+.planning-layout {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+}
+
+.planning {
+    flex: 1;
+    max-width: 1200px;
+}
+
+.planning-summary {
+    text-align: center;
+    margin-top: 25px;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+
+    .planning-layout {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .planning-stats {
+        width: 100%;
+        max-width: 700px;
+
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .planning-stats .stat-card {
+        width: 220px;
+    }
+
+    .planning {
+        width: 100%;
+        overflow-x: auto;
+        display: block;
+    }
+}
+
+.planning-summary {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+
+    margin-top: 25px;
+    margin-bottom: 35px;
+}
+
+.summary-item {
+    background: white;
+    padding: 14px 22px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+
+    color: #444;
+    font-size: 15px;
+}
+
+.summary-item strong {
+    color: #002b5c;
 }
