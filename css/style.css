@@ -671,28 +671,28 @@ opacity: 0.8;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 
-    max-width: 800px; /* 🔥 évite qu’il soit trop étiré verticalement */
+    max-width: 800px; /
 }
 
-/* INFO PLUS PETITE */
+
 .contact-info {
     flex: 1;
     padding: 30px;
 }
 
-/* INPUTS */
+
 .contact-card input {
     width: 100%;
 }
 
-/* 🔥 TEXTAREA PLUS GRAND (IMPORTANT) */
+
 .contact-card textarea {
     width: 100%;
-    min-height: 200px;   /* ⬅️ hauteur augmentée */
-    resize: vertical;    /* utilisateur peut agrandir */
+    min-height: 200px;   
+    resize: vertical;   
 }
 
-/* BOUTON PLUS PROPRE */
+
 .contact-card button {
     width: 100%;
     margin-top: 15px;
@@ -727,7 +727,7 @@ opacity: 0.8;
 
 .about-page {
     padding: 40px 20px;
-    max-width: 1200px; /* 🔥 plus large */
+    max-width: 1200px; 
     margin: auto;
 }
 
@@ -791,7 +791,7 @@ opacity: 0.8;
 
 .course.reseaux {
     background: #0A316C; /* Bleu académique */
-    color: white;
+    color: #7cabf2;
 }
 
 .course.projet {
@@ -1153,7 +1153,7 @@ opacity: 0.8;
     color: #002b5c;
 }
 
-/* GRID EXPERTISE */
+
 .expertise-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1225,7 +1225,6 @@ opacity: 0.8;
     margin-bottom: 30px;
 }
 
-/* 🔥 GRILLE VIE ÉTUDIANTE */
 .campus-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -1364,19 +1363,19 @@ opacity: 0.8;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
-/* TITRE */
+
 .contact-card h1 {
     color: #002b5c;
     margin-bottom: 10px;
 }
 
-/* SUBTITLE */
+
 .subtitle {
     margin-bottom: 20px;
     color: #666;
 }
 
-/* FORM */
+
 .contact-card form {
     display: flex;
     flex-direction: column;
@@ -1438,7 +1437,6 @@ opacity: 0.8;
     color: #002b5c;
     margin-bottom: 10px;
 }
-
 
 
 .contact-header {
@@ -1522,7 +1520,6 @@ opacity: 0.8;
     cursor: pointer;
 }
 
-/* INFOS */
 .contact-info {
     flex: 1;
 }
@@ -1549,7 +1546,7 @@ opacity: 0.8;
     line-height: 1.6;
 }
 
-/* MAP PLACEHOLDER */
+
 .map-placeholder {
     margin-top: 10px;
     height: 150px;
@@ -1742,7 +1739,7 @@ opacity: 0.8;
     padding: 18px 15px;
     border-radius: 14px;
     background: linear-gradient(135deg, #81ECEC, #0A316C);
-    color: white;
+    color : white;
 }
 .planning-stats .stat-number {
     font-size: 32px;
@@ -1754,78 +1751,3 @@ opacity: 0.8;
     flex: 1;
     margin: 0;
 }
-
-.calendar-page {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-.calendar-header {
-    text-align: center;
-    padding: 20px;
-}
-
-.week-nav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 10px;
-}
-
-.week-nav button {
-    padding: 8px 12px;
-    border: none;
-    background: #002b5c;
-    color: white;
-    border-radius: 8px;
-    cursor: pointer;
-}
-
-/* GRILLE TYPE GOOGLE CALENDAR */
-.calendar-grid {
-    flex: 1;
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    border-top: 1px solid #ddd;
-}
-
-/* COLONNE JOUR */
-.day-column {
-    border-left: 1px solid #eee;
-    position: relative;
-}
-
-.day-title {
-    text-align: center;
-    padding: 10px;
-    background: #002b5c;
-    color: white;
-    font-weight: bold;
-}
-
-/* BLOCS COURS */
-.course-block {
-    position: absolute;
-    left: 5px;
-    right: 5px;
-
-    border-radius: 10px;
-    padding: 6px;
-    font-size: 13px;
-    font-weight: bold;
-
-    cursor: pointer;
-}
-
-/* TYPES */
-.td { background: #81ECEC; }
-.cm { background: #b9e7ff; }
-.exam { background: rgba(255, 80, 80, 0.7); color: white; }
-
-/* HOVER */
-.course-block:hover {
-    transform: scale(1.03);
-}
-
-
